@@ -1,3 +1,17 @@
 .main{
     text-align: center;
 }
+
+.text-area{
+    min-height: 50px;
+    max-width: 100px;
+    height: 200px;
+    width: 500px;
+}
+.contact-us{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    border: 10px;
+    
+}
