@@ -7,3 +7,33 @@ title{
     padding: 10px;
     text-align: center;
 }
+
+.About-box{
+    margin: auto;
+    padding: 100px;
+    text-align: center;
+    border-color:black ;
+    background-color: blue;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    max-height: 1200px;
+}
+
+.quote-button{
+    background-color: silver;
+    text-align: center;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Title{
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+.Subtitle{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
