@@ -13,7 +13,7 @@ body{
     width: 500px;
 }
 .contact-us{
-    display: grid;
+    text-align: center !important;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     border: 10px;
