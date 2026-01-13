@@ -24,8 +24,13 @@ body{
 }
 .choices{
     border: 3px solid;
-    margin: 5px;
+    margin: 5px !important; 
     padding: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: center !important;
+}
+
+.choices:hover{
+     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
