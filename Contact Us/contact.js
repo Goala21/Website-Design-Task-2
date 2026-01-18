@@ -8,8 +8,9 @@ function checkinginput(event){
     let commentInput = document.getElementById("comment_input").value;
 
     if ((usernameInput == "") || (subjectInput == "") || (surnameInput == "") || (contactInput == "") || (commentInput == "")){
-        alert("You on weed on smth bro? Type that shit in")
+        alert("Please enter all the details")
     }
+    else window.location.href = "mailto:support@example.com";
 
 
 
