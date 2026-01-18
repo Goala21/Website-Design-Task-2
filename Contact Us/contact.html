@@ -64,8 +64,8 @@
       <fieldset class="mt-3">
         <legend>Contact Details</legend>
         <label for="Phone number"> Contact number: </label>
-        <input type="tel" name="Phone" maxlength="8" pattern="[0-9]{8}" class="Phone number"
-          placeholder="Enter Contact Number" inputmode="numeric" id="contact_input">
+        <input type="tel" name="Phone" maxlength="8" minlength="0" class="Phone number"
+          placeholder="Enter Contact Number" inputmode="numeric" id="contact_input" oninput="onlyNumbers(this)">
       </fieldset>
       <fieldset class="mt-3">
         <legend>Message Details</legend>
@@ -80,7 +80,7 @@
     </form>
 
     <section class="redirection_message">
-      <h2>Once all the details are filled correctly, you will be directed to outlook.</h3>
+      <p> Once all the details are filled correctly, you will be directed to outlook.</h3>
     </section>
 
 </body>
