@@ -6,7 +6,6 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="quiz.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="quiz.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -33,7 +32,7 @@
           <a class="nav-link" href="/Contact Us/contact.html">Contact us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Quiz/quiz.html">Quiz</a>
+          <a class="nav-link" href="/About me/aboutme.html">About me</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Select a page</a>
@@ -43,9 +42,10 @@
   </div>
 </nav>
 
+  <!-- The quiz questions and answer section -->
+
     <h1 class="title">Quiz</h1>
     <h2 class="subtitle">Answer all of these questions correctly to win a 10% discount on your next purchase</h2>
-    <button class="start">Start now</button>
     
     <section class="question2 mt-5">
   <div class="list-group">
@@ -86,12 +86,15 @@
       <button value="correct4" type="button" class="list-group-item list-group-item-action mt-1 border border-dark rounded" id="correct_answer4">Making the video file smaller</button>
     </ul>
   </div>
-
-  <button onclick="pointSystem()">Submit</button>
+  <div class="text-center mt-5">
+  <button onclick="pointSystem()" class="btn btn-secondary btn-lg" type="submit">Submit</button>
+  </div>
   </section>
 </html>
 </body>
 <script>
+
+  // Point system for the quiz section, if the person clicks on the wrong answer, no points, if clicked on the right one, it gives them a point and disables the other options.
 
   let score = 0;
   const correctAnswers = ['correct_answer1', 'correct_answer2', 'correct_answer3', 'correct_answer4'];
@@ -99,80 +102,143 @@
   document.getElementById("correct_answer1").onclick = function() {
     alert("Correct answer 1");
     score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true;
+    document.getElementById("wrong_answer1" ).disabled = true; 
+    document.getElementById("wrong_answer2" ).disabled = true;
+    console.log("+1 Point added currect score: " + score);
 };
 
   document.getElementById("correct_answer2").onclick = function() {
     alert("Correct answer 2");
     score = score + 1;
     this.style.backgroundColor = "#A9A9A9"; 
+    this.disabled = true;
+    document.getElementById("wrong_answer3" ).disabled = true; 
+    document.getElementById("wrong_answer4" ).disabled = true;
+    console.log("+1 Point added currect score: " + score);
 };  
 
   document.getElementById("correct_answer3").onclick = function() {
     alert("Correct answer 3");
     score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true;
+    document.getElementById("wrong_answer5" ).disabled = true; 
+    document.getElementById("wrong_answer6" ).disabled = true;
+    console.log("+1 Point added currect score: " + score); 
 };
 
   document.getElementById("correct_answer4").onclick = function() {
     alert("Correct answer 4");
     score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer7" ).disabled = true; 
+    document.getElementById("wrong_answer8" ).disabled = true;
+    console.log("+1 Point added currect score: " + score);
 };
 
   document.getElementById("wrong_answer1").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer1");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer2" ).disabled = true; 
+    document.getElementById("correct_answer1" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer2").onclick = function() {
-    alert("Wrong answer 2");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer2");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer1" ).disabled = true; 
+    document.getElementById("correct_answer1" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer3").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer3");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer4" ).disabled = true; 
+    document.getElementById("correct_answer2" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer4").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer4");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer3" ).disabled = true; 
+    document.getElementById("correct_answer2" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer5").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer5");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer6" ).disabled = true; 
+    document.getElementById("correct_answer3" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer6").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
-};
+    alert("wrong_answer6");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer5" ).disabled = true; 
+    document.getElementById("correct_answer3" ).disabled = true;
+};  console.log("Wrong Answer currect score: " + score );
+
   document.getElementById("wrong_answer7").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer7");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer7" ).disabled = true; 
+    document.getElementById("correct_answer4" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
+
   document.getElementById("wrong_answer8").onclick = function() {
-    alert("Wrong answer 1");
-    score = score + 1;
-    this.style.backgroundColor = "#A9A9A9"; 
+    alert("wrong_answer8");
+    this.style.backgroundColor = "#A9A9A9";
+    this.disabled = true; 
+    document.getElementById("wrong_answer7" ).disabled = true; 
+    document.getElementById("correct_answer4" ).disabled = true;
+    console.log("Wrong Answer currect score: " + score );
 };
 
-
+// This function will check if the person has clicked on all 4 correct answers and gives them an alert if they did it correct or not
 
 function pointSystem() {
     if (score == 4) {
         alert("You won! a 10% discount will be applied on your next purchase!");
+        score = 0;
     } else {
         alert("Some answers are incorrect, please try again");
+        score = 0;
+        console.log ("Points have been set to 0");
     }
+
+  // This is used to reset the colors and all the buttons back to be clickable
     
     const allButtons = document.querySelectorAll('.list-group-item');
     allButtons.forEach(function(button) {
         button.style.backgroundColor = '';
+        document.getElementById("correct_answer1" ).disabled = false;
+        document.getElementById("correct_answer2" ).disabled = false;
+        document.getElementById("correct_answer3" ).disabled = false;
+        document.getElementById("correct_answer4" ).disabled = false;
+        document.getElementById("wrong_answer1" ).disabled = false;
+        document.getElementById("wrong_answer2" ).disabled = false;
+        document.getElementById("wrong_answer3" ).disabled = false;
+        document.getElementById("wrong_answer4" ).disabled = false;
+        document.getElementById("wrong_answer5" ).disabled = false;
+        document.getElementById("wrong_answer6" ).disabled = false;
+        document.getElementById("wrong_answer7" ).disabled = false;
+        document.getElementById("wrong_answer8" ).disabled = false;
     });
     }
 
