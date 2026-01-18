@@ -3,10 +3,6 @@
     color: #0d0d0d;
 }
 
-body{
-}
-
-
 .services {
     display: flex;
     gap: 30px;
@@ -29,9 +25,7 @@ body{
 
 .bronze-package{
     --angle: 45deg; 
-    background: linear-gradient(var(--angle), #673208, #db6c2b)
-
-    
+    background: linear-gradient(var(--angle), #673208, #db6c2b)   
     
 }
 
